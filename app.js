@@ -248,10 +248,8 @@ app.get('/panel',routes.panel);
 app.post('/panel',routes.panel);
 
 
-
 app.get('/user/createUser', user.signup);
 app.post('/user/createUser', user.signup);
-
 
 
 http.createServer(app).listen(app.get('port'), function(){

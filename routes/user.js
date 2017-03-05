@@ -27,6 +27,13 @@
         })
   };
 
+  // @ninja
+  exports.editUser = function (req, res) {
+      res.render('user/signup', {
+        response : '' ,company_logo:company_logo_v
+      })
+  };
+
   exports.signup_post = function(req, res){ 
     var company_logo_v = req.session.company_logo;
 
