@@ -20,7 +20,7 @@
       })
   };
 
-  exports.signup = function(req, res){	
+  exports.signup = function(req, res){
       var company_logo_v = req.session.company_logo;
       res.render('user/createUser', {
           response : '' ,company_logo:company_logo_v
@@ -29,7 +29,8 @@
 
   // @ninja
   exports.editUser = function (req, res) {
-      res.render('user/signup', {
+	  var company_logo_v = req.session.company_logo;
+      res.render('user/editUser', {
         response : '' ,company_logo:company_logo_v
       })
   };

@@ -251,6 +251,8 @@ app.post('/panel',routes.panel);
 app.get('/user/createUser', user.signup);
 app.post('/user/createUser', user.signup);
 
+app.get('/user/editUser', user.editUser);
+app.post('/user/editUser', user.editUser);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
