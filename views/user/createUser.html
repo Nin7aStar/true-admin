@@ -7,89 +7,82 @@
 <div class="col-md-10">
 	<div class="tab-content">
 		<div >   
-		 	<h1>Create User</h1>	
+		 	<h1 style="color:#1D7DE4;">Create User</h1>
 			<form action="/PivB8JDIvk2piO3nTrue724service" method="post" enctype="multipart/form-data">
-				<div class="top-row">
-					<div class="field-wrap">
-						<label class="input_label">
-							company Name<span class="req">*</span>
-						</label>	
-						<input id="company_name" type="text" name="company_name" required autocomplete="off">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-offset-0 col-sm-3">
+							<div class="form-group">
+								<label for="name" ><h3 style="color:#1D7DE4;">Name:</h3></label>
+								<input type="text" class="form-control" id="name" placeholder="Name">
+							</div>
+						</div>
+						<div class="col-sm-offset-0 col-sm-3">
+							<div class="form-group">
+								<label for="user_name"><h3 style="color:#1D7DE4;">User Name<span>*</span>:</h3></label>
+								<input type="text" class="form-control" id="user_name" placeholder="User Name">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group">
+							<div class="col-sm-offset-0 col-sm-6">
+								<label for="user_email"><h3 style="color:#1D7DE4;">Email Address<span>*</span>:</h3></label>
+								<input type="text" class="form-control" id="user_email" placeholder="Email">
+							</div>
+						</div>
 					</div>
 
-					<div class="field-wrap">
-						<label class="input_label">
-							User name <span class="req">*</span>
-						</label>
-						<input name="user_name" id="user_name" type="text" required autocomplete="off" />
+					<div class="row">
+						<div class="form-group">
+							<div class="col-sm-offset-0 col-sm-6">
+								<label><h3 style="color:#1D7DE4;">Access:</h3></label>
+
+								<div class="row">
+									<label class="checkbox-inline">
+										<input type="checkbox" id="acc_audios" value="audios"> Audios
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox" id="acc_social" value="social network"> Social Networks
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox" id="acc_email" value="email"> Email
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox" id="acc_chats" value="chats"> Chats
+									</label>
+									<label class="checkbox-inline">
+										<input type="checkbox" id="acc_notes" value="notes"> Notes
+									</label>
+								</div>
+
+							</div>
+						</div>
 					</div>
 
-					<div>
-						<label class="input_label">
-							Full User Name <span class="req"></span>
-						</label>	
-						<input type="text" name="user_full_name" id="user_full_name" required autocomplete="off">
+					<div class="row">
+						<div class="col-sm-offset-0 col-sm-3">
+							<div class="form-group">
+								<label for="password" ><h3 style="color:#1D7DE4;">Create a Password<span>*</span>:</h3></label>
+								<input type="text" class="form-control" id="password" placeholder="New Password">
+							</div>
+						</div>
+						<div class="col-sm-offset-0 col-sm-3">
+							<div class="form-group">
+								<label for="cfm_password"><h3 style="color:#1D7DE4;">Confirm your Password<span>*</span>:</h3></label>
+								<input type="text" class="form-control" id="cfm_password" placeholder="Confirm a Password">
+							</div>
+						</div>
 					</div>
 
-					<div class="field-wrap">
-						<label class="input_label">
-						 	Email Address<span class="req">*</span>
-						</label>
-						<input name="email" id="email" type="email" required autocomplete="off"/>
-					</div>
-
-					<div class="field-wrap">
-						<label class="input_label">
-							Company Language<span class="req"></span>
-						</label>
-						<input type="text" name="language_company">
-					</div>
-
-					<div>
-						<label class="input_label">
-							Company Phone<span class="req"></span>		
-						</label>
-						<input type="numeric" name="company_phone">
-					</div>
-
-					<div>
-						<label class="input_label">
-							Company Country<span class="req"></span>
-						</label>
-						<input type="text" name="country_company">
-					</div>
-
-					<div>
-						<label class="input_label">
-							Company Cloud Name<span class="req"></span>
-						</label>
-						<input type="text" name="name_cloud_company">
-					</div>
-
-
-					<div class="field-wrap">
-						<label class="input_label">
-						 	Create a Password<span class="req">*</span>
-						</label>
-						<input name="pass" id="pass" type="password" required autocomplete="off"/>
-					</div>
-
-					<div class="field-wrap">
-						<label class="input_label">
-						 	Confirm your Password<span class="req">*</span>
-						</label>
-						<input name="pass_conf" id="pass_conf" type="password" required autocomplete="off"/>
-					</div>
-
-					<div class="field-wrap">
-						<label class="input_label" >
-							Company Logo<span class="req">*</span>
-						</label>
-						<input type="file" name="logo_file" id="logo_file" style="display: inline;">		
+					<!--<p id = 'msj' style="display:none"> Contraseña Incorrecta </p>-->
+					<div class="row">
+						<div class="col-sm-offset-0 col-sm-6">
+							<button type="submit" class="btn btn-default"/>Save</button>
+						</div>
 					</div>
 				</div>
-				<p id = 'msj' style="display:none"> Contraseña Incorrecta </p>
-				<button type="submit" class="button button-block"/>Get Started</button>
+
 			</form>
 		</div>
 	</div><!-- tab-content -->
@@ -111,30 +104,30 @@
 <!-- End Menu -->
 <!-- Start Footer -->
 <% include ../partial/footer.html %>
-	<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
-	<script type="text/javascript" src="js/jquery.slicknav.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
-	<script type="text/javascript" src="js/sessionWatcher.js"></script>
+	<script type="text/javascript" src="/js/jquery.isotope.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.slicknav.js"></script>
+	<script type="text/javascript" src="/js/script.js"></script>
+	<script type="text/javascript" src="/js/sessionWatcher.js"></script>
 
-	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="js/jquery.migrate.js"></script>
-	<script type="text/javascript" src="js/modernizrr.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/jquery.fitvids.js"></script>
-	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
-	<script type="text/javascript" src="js/nivo-lightbox.min.js"></script>
-	<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
-	<script type="text/javascript" src="js/jquery.appear.js"></script>
-	<script type="text/javascript" src="js/count-to.js"></script>
-	<script type="text/javascript" src="js/jquery.textillate.js"></script>
-	<script type="text/javascript" src="js/jquery.lettering.js"></script>
-	<script type="text/javascript" src="js/jquery.easypiechart.min.js"></script>
-	<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
-	<script type="text/javascript" src="js/jquery.parallax.js"></script>
-	<script type="text/javascript" src="js/mediaelement-and-player.js"></script>
-	<script type="text/javascript" src="js/jquery.slicknav.js"></script>
-	<script type="text/javascript" src="js/top-menu.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
-	<script type="text/javascript" src="js/sessionWatcher.js"></script>
+	<script type="text/javascript" src="/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.migrate.js"></script>
+	<script type="text/javascript" src="/js/modernizrr.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+	<script type="text/javascript" src="/js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="/js/nivo-lightbox.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.isotope.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.appear.js"></script>
+	<script type="text/javascript" src="/js/count-to.js"></script>
+	<script type="text/javascript" src="/js/jquery.textillate.js"></script>
+	<script type="text/javascript" src="/js/jquery.lettering.js"></script>
+	<script type="text/javascript" src="/js/jquery.easypiechart.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.nicescroll.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.parallax.js"></script>
+	<script type="text/javascript" src="/js/mediaelement-and-player.js"></script>
+	<script type="text/javascript" src="/js/jquery.slicknav.js"></script>
+	<script type="text/javascript" src="/js/top-menu.js"></script>
+	<script type="text/javascript" src="/js/script.js"></script>
+	<script type="text/javascript" src="/js/sessionWatcher.js"></script>
 <!-- End Footer -->
 <% include ../partial/end.html %>

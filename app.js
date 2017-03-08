@@ -63,7 +63,6 @@ if ('development' == app.get('env')) {
 //variables globales
 var SALT_WORK_FACTOR = 10;
 
-
 //Conexión a la base de datos Mongo
 
 mongoose.connect('mongodb://localhost/prueba_db_2', function(error){
@@ -86,7 +85,7 @@ var company_schema = mongoose.Schema({
   email_company: { type:String, required: true },
   country_company: { type: String, required: true },
   callcenter_conversations: [{
-    name_callcenter: { type: String, required: true },  
+    name_callcenter: { type: String, required: true },
     campaign_callcenter_conversations :[{
       language_campaign : { type: String, required: true },
       name_campaign: { type: String, required: true },
@@ -145,7 +144,7 @@ var token_schema = mongoose.Schema({
 });
 
 //esquema de logs
-var log_schema = mongoose.Schema({  
+var log_schema = mongoose.Schema({
   from_log: { type:String, required: true },
   to_log: { type:String, required: true },
   description_log: { type:String, required: true },
@@ -168,17 +167,17 @@ var category_schema = mongoose.Schema({
 //esquema para guardar contraseña de usuario
 user_schema.pre('save', function(next){
     var user = this;
-      
+
     if (!user.isModified('password_user')){
-      return next();  
-    } 
- 
+      return next();
+    }
+
     bcrypt.genSalt(SALT_WORK_FACTOR, function(err, salt){
         if(err) return next(err);
- 
+
         bcrypt.hash(user.password_user, salt, function(err, hash){
             if(err) return next(err);
- 
+
             user.password_user = hash;
             next();
         });
@@ -187,7 +186,7 @@ user_schema.pre('save', function(next){
 
 //esquema y metodo para comparar contraseña de usuario
 user_schema.methods.comparePassword = function(candidatePassword, cb) {
-    bcrypt.compare(candidatePassword, this.password_user, function(err, isMatch) {   
+    bcrypt.compare(candidatePassword, this.password_user, function(err, isMatch) {
         if (err) {
           return cb(err);
         }
@@ -202,7 +201,6 @@ var user_model = mongoose.model('coll_users', user_schema);
 var token_model = mongoose.model('coll_tokens', token_schema);
 var log_model = mongoose.model('coll_logs', log_schema);
 var category_model = mongoose.model('coll_categories', category_schema);
-
 
 
 sesiones.setModel(user_model);
@@ -254,8 +252,10 @@ app.post('/user/createUser', user.signup);
 app.get('/user/editUser', user.editUser);
 app.post('/user/editUser', user.editUser);
 
+app.get('/user/config', user.config);
+app.post('/user/config', user.config);
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
 // Schemas
-

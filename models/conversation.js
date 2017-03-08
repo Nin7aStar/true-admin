@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var Cconversation_schema = ({
+var conversation_schema = ({
     to_conversations: {type: String},
     name_conversations: {type: String},
     stardate_conversations: {type: Date, required: true},
@@ -18,4 +18,4 @@ var Cconversation_schema = ({
     from_conversations: {type:String, required: true},
     // transcriptions : { type: mongoose.Schema.Types.ObjectId, ref: 'coll_transcriptions' },
 });
-module.exports = mongoose.model('coll_conversations', Cconversation_schema);
+module.exports = mongoose.model('coll_conversations', conversation_schema);

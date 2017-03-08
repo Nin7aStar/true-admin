@@ -1,0 +1,188 @@
+<!-- Start Header-->
+<% include ../partial/header.html %>
+<!-- End Header -->
+
+<!-- Start Menu -->
+<% include ../partial/menu_select.html %>
+<div class="col-md-8">
+    <h1 style="color:#1D7DE4;">Configuration</h1>
+
+    <div class="container">
+        <!-- START CAMPAIGN SCRIPT -->
+        <div class="row">
+            <h2 style="color: #1D7DE4;">Campaign Script</h2>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label><h3 style="color:#1D7DE4;">Select Campaign:</h3></label>
+                    <select class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label><h3 style="color:#1D7DE4;">Attach Script:</h3></label>
+                    <input type="text" class="form-control" id="attach_file" placeholder="Attach File...">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-default" style="margin-top: 28px;">Send</button>
+            </div>
+            <div class="col-md-8">
+                <div class="block">
+                    <div class="block-content">
+                        <table class="table table-hover table-border table-header-bg">
+                            <thead style="color: #fff; background-color: #5c90d2; border-bottom-color: #5c90d2;">
+                            <tr>
+                                <th class="hidden-xs" style="width: 30%;">Campaign</th>
+                                <th class="hidden-xs" style="width: 50%;">Script</th>
+                                <th class="text-center" style="width: 20%;">Options</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Rebecca Reid</td>
+                                <td class="hidden-xs">
+                                    <span class="label label-danger">Disabled</span>
+                                </td>
+                                <td class="text-center">
+                                    <div class="btn-group">
+                                        <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                        <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Amber Walker</td>
+                                <td class="hidden-xs">
+                                    <span class="label label-warning">Trial</span>
+                                </td>
+                                <td class="text-center">
+                                    <div class="btn-group">
+                                        <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                        <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END -->
+    </div>
+
+    <hr style="border-top: 1px solid #1D7DE4; width: 68%; margin-left: 15px;">
+
+    <div class="container">
+        <!--START CATEGORIES -->
+        <div class="row">
+            <h2 style="color: #1D7DE4;">Categories</h2>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="category" ><h3 style="color:#1D7DE4;">Add Categorie:</h3></label>
+                    <input type="text" class="form-control" id="category" placeholder="Categorie Name">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="words"><h3 style="color:#1D7DE4;">Words:</h3></label>
+                    <input type="text" class="form-control" id="words">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <!-- Header BG Table -->
+                <div class="block">
+                    <div class="block-content">
+                        <table class="table table-hover table-border table-header-bg">
+                            <thead  style="color: #fff; background-color: #5c90d2; border-bottom-color: #5c90d2;">
+                            <tr>
+                                <th>Campaign</th>
+                                <th class="hidden-xs" style="width: 15%;">Script</th>
+                                <th class="text-center" style="width: 100px;">Options</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Rebecca Reid</td>
+                                <td class="hidden-xs">
+                                    <span class="label label-danger">Disabled</span>
+                                </td>
+                                <td class="text-center">
+                                    <div class="btn-group">
+                                        <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                        <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Amber Walker</td>
+                                <td class="hidden-xs">
+                                    <span class="label label-warning">Trial</span>
+                                </td>
+                                <td class="text-center">
+                                    <div class="btn-group">
+                                        <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                        <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- END Header BG Table -->
+            </div>
+        </div>
+        <hr style="border-top: 1px solid #1D7DE4; width: 68%; margin-left: 15px;">
+
+        <div class="row">
+            <h2 style="color: #1D7DE4;">Categories</h2>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="attach" ><h3 style="color:#1D7DE4;">Attach:</h3></label>
+                    <input type="text" class="form-control" id="attach" placeholder="Attach File...">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-default" style="margin-top: 28px">Save</button>
+                <button type="submit" class="btn btn-default" style="margin-top: 28px">Cancel</button>
+            </div>
+        </div>
+        <!--END CATEGORIES-->
+    </div>
+</div>
+
+<% include ../partial/end_menu.html %>
+<!-- End Menu -->
+<!-- Start Footer -->
+<% include ../partial/footer.html %>
+<script type="text/javascript" src="/js/jquery.isotope.min.js"></script>
+<script type="text/javascript" src="/js/jquery.slicknav.js"></script>
+<script type="text/javascript" src="/js/script.js"></script>
+<script type="text/javascript" src="/js/sessionWatcher.js"></script>
+
+<script type="text/javascript" src="/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="/js/jquery.migrate.js"></script>
+<script type="text/javascript" src="/js/modernizrr.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/js/nivo-lightbox.min.js"></script>
+<script type="text/javascript" src="/js/jquery.isotope.min.js"></script>
+<script type="text/javascript" src="/js/jquery.appear.js"></script>
+<script type="text/javascript" src="/js/count-to.js"></script>
+<script type="text/javascript" src="/js/jquery.textillate.js"></script>
+<script type="text/javascript" src="/js/jquery.lettering.js"></script>
+<script type="text/javascript" src="/js/jquery.easypiechart.min.js"></script>
+<script type="text/javascript" src="/js/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="/js/jquery.parallax.js"></script>
+<script type="text/javascript" src="/js/mediaelement-and-player.js"></script>
+<script type="text/javascript" src="/js/jquery.slicknav.js"></script>
+<script type="text/javascript" src="/js/top-menu.js"></script>
+<script type="text/javascript" src="/js/script.js"></script>
+<script type="text/javascript" src="/js/sessionWatcher.js"></script>
+<!-- End Footer -->
+<% include ../partial/end.html %>
